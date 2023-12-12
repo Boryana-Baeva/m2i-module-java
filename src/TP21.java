@@ -5,16 +5,23 @@ public class TP21 {
         var input=new Scanner(System.in);
         System.out.print("Votre langue :");
         var language=input.next();// french
-        var greeting = "";
+        var message = switch (language.toLowerCase()) {
+            case "english" -> "Hello!!";
+            case "french" -> "Salut!!";
+            case "spanish" -> "Hola!!";
+            case "german" -> "Guten tag!!";
+            default -> "Language not supported.";
+        };
+        System.out.println(message);
 
-        switch (language.toLowerCase()) {
-            case "english" : greeting = "Hello!!";break;
-            case "french" : greeting = "Salut!!";break;
-            case "spanish" : greeting = "Hola!!";break;
-            case "german" : greeting = "Guten tag!!";break;
-            default: greeting = "Language not supported.";
+        /*switch (language.toLowerCase()) {
+            case "english" : message = "Hello!!";break;
+            case "french" : message = "Salut!!";break;
+            case "spanish" : message = "Hola!!";break;
+            case "german" : message = "Guten tag!!";break;
+            default: message = "Language not supported.";
         }
-        System.out.println(greeting);
+        System.out.println(message);*/
 
 //        if(language.equals("english")){
 //            System.out.println("Hello!!");

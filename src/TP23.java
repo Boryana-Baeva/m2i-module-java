@@ -15,15 +15,20 @@ public class TP23 {
 
         System.out.printf("a=%.2f, b=%.2f, c=%.2f\n", a, b, c);
 
+        if(a == 0) {
+            System.err.println("L'équation n'est pas de 2eme degré :");
+            System.exit(1);
+        }
+
         if (discriminant > 0) {
-            System.out.printf("L'équation a deux solutions distinctes : ", a, b, c);
+            System.out.print("L'équation a deux solutions distinctes : ");
             System.out.printf("%.2f et %.2f",
                     (-b - Math.sqrt(discriminant))/(2*a),
                     (-b + Math.sqrt(discriminant))/(2*a));
         } else if (discriminant == 0) {
-            System.out.printf("L'équation a une unique solution : %.2f", a, b, c, -(b/(2*a)));
+            System.out.printf("L'équation a une unique solution : %.2f", -(b/(2*a)));
         } else {
-            System.out.printf("L'équation n'a pas de solution réelle", a, b, c);
+            System.out.println("L'équation n'a pas de solution réelle");
         }
     }
 }

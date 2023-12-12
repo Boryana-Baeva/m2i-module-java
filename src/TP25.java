@@ -27,7 +27,7 @@ public class TP25 {
             case '/','4' :
                 System.out.printf("%.1f / %.1f = %.1f",number1, number2, (number1 / number2)); break;
             default:
-                System.out.println("Choix invalid ! ");
+                System.out.println("Sélection invalide ! ");
         }
 
     }

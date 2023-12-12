@@ -4,7 +4,6 @@ public class TP22 {
     public static void main(String[] args) {
         var input = new Scanner(System.in);
 
-
         System.out.print("Entrez un nombre entier: ");
         var number = input.nextInt();
         var isPositif = number > 0;
