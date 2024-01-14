@@ -27,9 +27,20 @@ public class TP5 {
             notesPhysique[i]=noteSaisie;
         }
 
+        double somme = 0;
         for(int i=0;i<notesPhysique.length;i++){
-            System.out.printf("Note[%d] : %.1f\n",i,notesPhysique[i]);
+            System.out.printf("Note[%d] : %.1f\n",i+1,notesPhysique[i]);
+            //Calculate the total sum of the grades
+            somme += notesPhysique[i];
         }
 
+        // Calculate the average of the grades
+        double moyenne = somme/notesPhysique.length;
+
+        System.out.println();
+        System.out.printf("Somme : %.2f\n",somme);
+        System.out.printf("Moyenne : %.2f\n",moyenne);
+
+        input.close();
     }
 }

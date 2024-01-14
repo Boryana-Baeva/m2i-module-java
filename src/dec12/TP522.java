@@ -50,5 +50,6 @@ public class TP522 {
         System.out.printf("Somme : %.2f\n",somme);
         System.out.printf("Moyenne : %.2f\n",moyenne);
 
+        input.close();
     }
 }

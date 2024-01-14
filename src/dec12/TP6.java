@@ -14,7 +14,8 @@ public class TP6 {
         // Check if the chosen PIN code contains 4 digits
         do {
             System.out.print("Veuillez entrer un code PIN composé de 4 chiffres: ");
-            codePin=input.nextInt();//1234
+
+            codePin=input.nextInt();//1234  ->  Implement verif pour 0000
             codeString = Integer.toString(codePin);
             if(codeString.length() != 4)
                 System.out.println("Code Pin Invalide!");
@@ -51,5 +52,7 @@ public class TP6 {
         // If the last attempt has been successful, show a welcome message
         if(codePinATester == codePin)
             System.out.println("Bienvenue !");
+
+        input.close();
     }
 }
